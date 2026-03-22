@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Je commence le VibeCoding</title>
+  <title>Je commence le VibeCoding — Nass Riviera</title>
   <style>
     * {
       margin: 0;
@@ -19,32 +19,61 @@
     }
     
     .container {
-      max-width: 600px;
+      max-width: 540px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
     
-    /* PHOTO PLACEHOLDER */
-    .photo-placeholder {
-      width: 150px;
-      height: 150px;
+    /* PHOTO */
+    .photo {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #FF6B00 0%, #00E5FF 100%);
-      margin: 0 auto 30px;
-      display: flex;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 3px solid #FF6B00;
+      box-shadow: 0 0 30px rgba(255, 107, 0, 0.3);
+    }
+    
+    /* NOM + TAGLINE */
+    .author-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .tagline {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
+    
+    /* SOCIAL PROOF */
+    .social-proof {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 14px;
+      gap: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
       color: rgba(255,255,255,0.7);
-      border: 3px solid rgba(255,255,255,0.2);
+      margin-bottom: 35px;
+    }
+    
+    .social-proof .number {
+      color: #00E5FF;
+      font-weight: 700;
     }
     
     /* TITRE */
     .title {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 800;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       line-height: 1.2;
     }
     
@@ -58,9 +87,9 @@
     
     /* PROMESSE */
     .promise {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       color: rgba(255,255,255,0.85);
-      margin-bottom: 40px;
+      margin-bottom: 35px;
       line-height: 1.6;
     }
     
@@ -68,30 +97,58 @@
       color: #00E5FF;
     }
     
+    /* BÉNÉFICES */
+    .benefits {
+      text-align: left;
+      margin-bottom: 30px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      padding: 20px 25px;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .benefit-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .benefit-icon {
+      color: #00E5FF;
+      margin-right: 12px;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    
     /* FORMULAIRE */
     .form-container {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 30px;
+      padding: 25px;
+      margin-bottom: 25px;
     }
     
-    .form-title {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: rgba(255,255,255,0.9);
+    .form-label {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: rgba(255,255,255,0.8);
     }
     
     .input-field {
       width: 100%;
-      padding: 16px 20px;
+      padding: 16px 18px;
       font-size: 1rem;
       border: 2px solid rgba(255,255,255,0.1);
       border-radius: 10px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(0,0,0,0.3);
       color: #fff;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       transition: border-color 0.3s;
     }
     
@@ -101,13 +158,13 @@
     }
     
     .input-field::placeholder {
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.4);
     }
     
     .cta-button {
       width: 100%;
       padding: 18px 30px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       border: none;
       border-radius: 10px;
@@ -121,48 +178,40 @@
     
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
     }
     
-    /* BULLET POINTS */
-    .benefits {
-      text-align: left;
-      margin-bottom: 30px;
-    }
-    
-    .benefit-item {
+    /* GARANTIE */
+    .guarantee {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 15px;
-      font-size: 1rem;
-      color: rgba(255,255,255,0.85);
-    }
-    
-    .benefit-icon {
-      color: #00E5FF;
-      margin-right: 12px;
-      font-size: 1.2rem;
-    }
-    
-    /* FOOTER */
-    .footer {
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       font-size: 0.85rem;
       color: rgba(255,255,255,0.5);
-      margin-top: 30px;
+    }
+    
+    .guarantee-icon {
+      font-size: 1rem;
     }
     
     /* RESPONSIVE */
     @media (max-width: 480px) {
       .title {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
       }
       
       .promise {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
       }
       
       .container {
-        padding: 40px 15px;
+        padding: 35px 15px;
+      }
+      
+      .photo {
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
@@ -170,9 +219,16 @@
 <body>
   <div class="container">
     
-    <!-- PHOTO PLACEHOLDER - Remplacer par ta photo -->
-    <div class="photo-placeholder">
-      [Ta photo ici]
+    <!-- PHOTO -->
+    <img src="nass-photo.jpg" alt="Nass Riviera" class="photo">
+    
+    <!-- NOM + TAGLINE -->
+    <p class="author-name">Nass Riviera</p>
+    <p class="tagline">Je lance des business sans coder grâce au VibeCoding</p>
+    
+    <!-- SOCIAL PROOF -->
+    <div class="social-proof">
+      <span class="number">15 278</span> followers sur les réseaux
     </div>
     
     <!-- TITRE -->
@@ -182,7 +238,7 @@
     
     <!-- PROMESSE -->
     <p class="promise">
-      Crée ton premier projet en VibeCoding en <strong>60 minutes</strong>, même si t'as jamais codé.
+      Crée ton premier projet en <strong>60 minutes</strong>, même si t'as jamais codé.
     </p>
     
     <!-- BÉNÉFICES -->
@@ -193,7 +249,7 @@
       </div>
       <div class="benefit-item">
         <span class="benefit-icon">✓</span>
-        <span>Guide pas-à-pas en vidéo</span>
+        <span>Guide vidéo pas-à-pas</span>
       </div>
       <div class="benefit-item">
         <span class="benefit-icon">✓</span>
@@ -203,16 +259,17 @@
     
     <!-- FORMULAIRE -->
     <div class="form-container">
-      <p class="form-title">Accède à la formation gratuite :</p>
+      <p class="form-label">Accède à la formation gratuite :</p>
       
       <!-- Remplacer par le formulaire Systeme.io -->
-      <input type="email" class="input-field" placeholder="Ton email">
+      <input type="email" class="input-field" placeholder="Ton meilleur email">
       <button class="cta-button">Je commence maintenant →</button>
     </div>
     
-    <!-- FOOTER -->
-    <p class="footer">
-      🔒 Tes données restent privées. Pas de spam.
+    <!-- GARANTIE -->
+    <p class="guarantee">
+      <span class="guarantee-icon">🔒</span>
+      <span>Tes données restent privées. Zéro spam.</span>
     </p>
     
   </div>
