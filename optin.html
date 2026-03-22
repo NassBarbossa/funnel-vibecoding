@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Je commence le VibeCoding</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0A0F1A 0%, #1A1F2E 100%);
+      min-height: 100vh;
+      color: #fff;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    /* PHOTO PLACEHOLDER */
+    .photo-placeholder {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FF6B00 0%, #00E5FF 100%);
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      border: 3px solid rgba(255,255,255,0.2);
+    }
+    
+    /* TITRE */
+    .title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .title span.orange {
+      color: #FF6B00;
+    }
+    
+    .title span.cyan {
+      color: #00E5FF;
+    }
+    
+    /* PROMESSE */
+    .promise {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    
+    .promise strong {
+      color: #00E5FF;
+    }
+    
+    /* FORMULAIRE */
+    .form-container {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .form-title {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      margin-bottom: 15px;
+      transition: border-color 0.3s;
+    }
+    
+    .input-field:focus {
+      outline: none;
+      border-color: #00E5FF;
+    }
+    
+    .input-field::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .cta-button {
+      width: 100%;
+      padding: 18px 30px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #FF6B00 0%, #FF8533 100%);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+    }
+    
+    /* BULLET POINTS */
+    .benefits {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .benefit-icon {
+      color: #00E5FF;
+      margin-right: 12px;
+      font-size: 1.2rem;
+    }
+    
+    /* FOOTER */
+    .footer {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 30px;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.8rem;
+      }
+      
+      .promise {
+        font-size: 1.1rem;
+      }
+      
+      .container {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- PHOTO PLACEHOLDER - Remplacer par ta photo -->
+    <div class="photo-placeholder">
+      [Ta photo ici]
+    </div>
+    
+    <!-- TITRE -->
+    <h1 class="title">
+      Je commence le <span class="orange">Vibe</span><span class="cyan">Coding</span>
+    </h1>
+    
+    <!-- PROMESSE -->
+    <p class="promise">
+      Crée ton premier projet en VibeCoding en <strong>60 minutes</strong>, même si t'as jamais codé.
+    </p>
+    
+    <!-- BÉNÉFICES -->
+    <div class="benefits">
+      <div class="benefit-item">
+        <span class="benefit-icon">✓</span>
+        <span>Aucune compétence technique requise</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">✓</span>
+        <span>Guide pas-à-pas en vidéo</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">✓</span>
+        <span>Résultats concrets dès la première heure</span>
+      </div>
+    </div>
+    
+    <!-- FORMULAIRE -->
+    <div class="form-container">
+      <p class="form-title">Accède à la formation gratuite :</p>
+      
+      <!-- Remplacer par le formulaire Systeme.io -->
+      <input type="email" class="input-field" placeholder="Ton email">
+      <button class="cta-button">Je commence maintenant →</button>
+    </div>
+    
+    <!-- FOOTER -->
+    <p class="footer">
+      🔒 Tes données restent privées. Pas de spam.
+    </p>
+    
+  </div>
+</body>
+</html>
