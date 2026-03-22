@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Je commence le VibeCoding — Formation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0A0F1A 0%, #1A1F2E 100%);
+      min-height: 100vh;
+      color: #fff;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+    
+    /* HEADER */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 3px solid #FF6B00;
+      box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+    }
+    
+    .welcome-text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    
+    .title span.orange {
+      color: #FF6B00;
+    }
+    
+    .title span.cyan {
+      color: #00E5FF;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 15px;
+    }
+    
+    /* VIDÉOS */
+    .video-section {
+      margin-bottom: 40px;
+    }
+    
+    .video-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #FF6B00 0%, #FF8533 100%);
+      border-radius: 50%;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-right: 12px;
+    }
+    
+    .video-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      margin: 50px 0;
+    }
+    
+    /* CTA SECTION */
+    .cta-section {
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 40px 30px;
+      margin-top: 50px;
+    }
+    
+    .cta-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .cta-text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 16px 40px;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #FF6B00 0%, #FF8533 100%);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
+    }
+    
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .footer-text {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+    }
+    
+    .footer-text a {
+      color: #00E5FF;
+      text-decoration: none;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.5rem;
+      }
+      
+      .video-title {
+        font-size: 1.1rem;
+      }
+      
+      .container {
+        padding: 35px 15px;
+      }
+      
+      .cta-section {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- HEADER -->
+    <div class="header">
+      <img src="nass-photo.jpg" alt="Nass Riviera" class="photo">
+      <p class="welcome-text">Bienvenue dans la formation</p>
+      <h1 class="title">
+        Je commence le <span class="orange">Vibe</span><span class="cyan">Coding</span>
+      </h1>
+      <p class="subtitle">2 vidéos pour démarrer ton premier projet</p>
+    </div>
+    
+    <!-- VIDÉO 1 -->
+    <div class="video-section">
+      <h2 class="video-title">
+        <span class="video-number">1</span>
+        Pourquoi tu dois apprendre le VibeCoding en 2026
+      </h2>
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/gBRvSOYIgo0" 
+          title="Pourquoi tu dois apprendre le VibeCoding en 2026"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <!-- VIDÉO 2 -->
+    <div class="video-section">
+      <h2 class="video-title">
+        <span class="video-number">2</span>
+        Comment VibeCoder
+      </h2>
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/ufny7Ivtu54" 
+          title="Comment VibeCoder"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    
+    <!-- CTA SECTION -->
+    <div class="cta-section">
+      <h3 class="cta-title">Prêt à aller plus loin ?</h3>
+      <p class="cta-text">
+        Tu viens de découvrir les bases. Rejoins-moi pour passer au niveau supérieur.
+      </p>
+      <a href="#" class="cta-button">Découvrir la suite →</a>
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+      <p class="footer-text">
+        © 2026 <a href="#">Nass Riviera</a> — VibeCoding
+      </p>
+    </div>
+    
+  </div>
+</body>
+</html>
